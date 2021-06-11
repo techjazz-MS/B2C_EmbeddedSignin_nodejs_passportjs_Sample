@@ -22,12 +22,9 @@
             <ul class="navbar-nav navbar-right">
                 <% if (!user) { %>
                     <li class="nav-item active">
-                        <a class="btn btn-custom" href="/login/?p=B2C_1A_signup_signin_EmbeddedSignin" id="signIn" style="color: rgb(240, 238, 235);"><i class="fas fa-sign-in-alt"></i> SignIn</a>
+                        <a class="btn btn-custom" href="/login/?p=B2C_1A_signup_signin" id="signIn" style="color: rgb(240, 238, 235);"><i class="fas fa-sign-in-alt"></i> SignIn</a>
                     </li>                    
                 <% } else { %>
-                    <!-- <li class="nav-item active">
-                        <a href="/profile" class="nav-username"><span class="fa fa-user"></span> <%= user.displayName %></p>
-                    </li> -->
                     <li class="nav-item active">
                         <div class="dropdown show">
                             <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

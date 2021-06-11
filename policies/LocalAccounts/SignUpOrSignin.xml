@@ -4,16 +4,16 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="soumiorgb2c.onmicrosoft.com"
-  PolicyId="B2C_1A_signup_signin_EmbeddedSignin"
-  PublicPolicyUri="http://login.thegamesstore.in/B2C_1A_signup_signin_EmbeddedSignin"
+  TenantId="yourcustomdomain.onmicrosoft.com"
+  PolicyId="B2C_1A_signup_signin"
+  PublicPolicyUri="http://yourcustomdomain/B2C_1A_signup_signin"
   DeploymentMode="Development"
   UserJourneyRecorderEndpoint="urn:journeyrecorder:applicationinsights">
   
 
   <BasePolicy>
-    <TenantId>soumiorgb2c.onmicrosoft.com</TenantId>
-    <PolicyId>B2C_1A_TrustFrameworkExtensions_EmbeddedSignin</PolicyId>
+    <TenantId>yourcustomdomain.onmicrosoft.com</TenantId>
+    <PolicyId>B2C_1A_TrustFrameworkExtensions</PolicyId>
   </BasePolicy>
 
   <RelyingParty>

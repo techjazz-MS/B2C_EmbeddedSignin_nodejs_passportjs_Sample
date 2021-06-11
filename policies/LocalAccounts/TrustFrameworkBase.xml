@@ -4,9 +4,9 @@
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns="http://schemas.microsoft.com/online/cpim/schemas/2013/06"
   PolicySchemaVersion="0.3.0.0"
-  TenantId="soumiorgb2c.onmicrosoft.com"
-  PolicyId="B2C_1A_TrustFrameworkBase_EmbeddedSignin"
-  PublicPolicyUri="http://login.thegamesstore.in/B2C_1A_TrustFrameworkBase_EmbeddedSignin">
+  TenantId="yourcustomdomain.onmicrosoft.com"
+  PolicyId="B2C_1A_TrustFrameworkBase"
+  PublicPolicyUri="http://yourcustomdomain/B2C_1A_TrustFrameworkBase">
 
   <BuildingBlocks>
     <ClaimsSchema>

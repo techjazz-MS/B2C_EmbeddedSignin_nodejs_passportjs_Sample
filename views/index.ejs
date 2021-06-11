@@ -3,7 +3,6 @@
 <head>
     <title>B2C-OIDC-WebApp</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!-- load bootstrap css -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous"> <!-- load fontawesome -->
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -11,7 +10,6 @@
     <nav class="navbar navbar-expand-lg navbar-custom" style="background-color: #313030;">
         <a class="navbar-brand navbar-text" href="/"><img src="/images/CloudLogo.gif" width="50" height="50" > B2C-OIDC Login App</a>
         <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <!-- <span class="navbar-toggler-icon"></span> -->
             <span class="line"></span> 
             <span class="line"></span> 
             <span class="line" style="margin-bottom: 0;"></span>
@@ -24,7 +22,6 @@
                 <% if (!user) { %>
                     <li class="nav-item active">
                         <a class="btn btn-custom" id="signIn" data-toggle="modal" data-target="#loginModal" style="color: #fff;"><i class="fas fa-sign-in-alt"></i> SignIn</a>
-                        <!-- <button  class="btn btn-custom" id="signIn" data-toggle="modal" data-target="#loginModal" ><i class="fa fa-sign-in" aria-hidden="true" data-toggle="modal" data-target="#logineModal"></i> Sign In</button> -->
                     </li>
 
                     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -41,17 +38,13 @@
                                     <img id="loader1" src="/images/spinner.gif" width="100" height="100" alt="loading gif" />
                                 </div>
                                 <iframe id="loginFrame" frameborder="0" src="about:blank" data-isloaded="0" ></iframe> 
-                                <!-- <iframe id="loginframe" frameborder="0" src="/login/?p=B2C_1A_signup_signin_HostName" ></iframe> -->
                             </div>
                         </div>
                     </div>
 
-                    <!-- avoid using preloading of the policy page to avoid throttling. Only preload on the first time the app is loaded and it should be unloaded. The next attempt the user tries to signin, load the page again on demand and it should be a faster loading.  -->
+                <!-- avoid using preloading of the policy page to avoid throttling. Only preload on the first time the app is loaded and it should be unloaded. The next attempt the user tries to signin, load the page again on demand and it should be a faster loading.  -->
                                     
                 <% } else { %>
-                    <!-- <li class="nav-item active">
-                        <a href="/profile" class="nav-username"><span class="fa fa-user"></span> <%= user.displayName %></p>
-                    </li> -->
                     <li class="nav-item active">
                         <div class="dropdown show">
                             <a class="btn btn-dropdown dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,10 +76,10 @@
     </div>
 
     <div class="footer">
-        <p>B2C OIDC WebApp - Passport Application</p>
+        <p>B2C OIDC WebApp - Passport.js Application</p>
     </div>
 
-    <!--  -->
+    <!-- Bootstrap Sc  -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -103,7 +96,7 @@
             $('#loginFrame').on('load', function () {
                 $('#loader1').hide();
             });
-            $('#loginFrame').attr('src', '/login/?p=B2C_1A_signup_signin_EmbeddedSignin');
+            $('#loginFrame').attr('src', '/login/?p=B2C_1A_signup_signin');
         });
     </script>
 

@@ -4,11 +4,12 @@ exports.creds = {
      *  In identityMetadata property you need to enter the custom domain name that is added in the B2C tenant.
      *  Make sure you follow the steps mentioned in the README.md file for more details on configuring the custom
      *  domains in B2C
+     *  Must be a custom domain name. For example: https://login.contoso.com
     */
-    identityMetadata: 'https://login.<B2C-Custom-Domain_Name>/<B2C-Custom-Domain_Name>/v2.0/.well-known/openid-configuration',
+    identityMetadata: 'https://login.yourcustomdomain.com/yourcustomdomain.com/v2.0/.well-known/openid-configuration',
 
     // Required, the client ID of your app in AAD 
-    clientID: '<your_client_id>',
+    clientID: '<client_id>',
 
     // Required, must be 'code', 'code id_token', 'id_token code' or 'id_token' 
     // If you want to get access_token, you must be 'code', 'code id_token' or 'id_token code'
@@ -20,14 +21,14 @@ exports.creds = {
     // Required, the reply URL registered in AAD for your app
     // Make sure the redirect url for the app is also in the same domain as the B2C's custom domain
     // For eg: If the Custom domain name is contoso.com then the redurirect url should be "https://app.contoso.com/..."
-    redirectUrl: 'https://app.<B2C-Custom-Domain_Name>/auth/openid/return', 
+    redirectUrl: 'https://app.yourcustomdomain.com/auth/openid/return', 
 
     // Required if we use http for redirectUrl
     allowHttpForRedirectUrl: true,
 
     // Required if `responseType` is 'code', 'id_token code' or 'code id_token'. 
     // If app key contains '\', replace it with '\\'.
-    clientSecret: '<your_client_secret>',
+    clientSecret: '<client_secret>',
     
     // Required, must be true for B2C
     isB2C: true,
@@ -76,7 +77,7 @@ exports.creds = {
 // replace <tenant_name> with your tenant name, and
 // replace <signin_policy_name> with your signin policy name.
 exports.destroySessionUrl = 
-  'https://login.<B2C-Custom-Domain_Name>/<B2C-Custom-Domain_Name>/oauth2/v2.0/logout?p=<signin_policy_name>' +
-  '&post_logout_redirect_uri=https://app.<B2C-Custom-Domain_Name>/';
+  'https://login.yourcustomdomain.com/yourcustomdomain.com/oauth2/v2.0/logout?p=<signin_policy_name>' +
+  '&post_logout_redirect_uri=https://app.yourcustomdomain.com/';
 
 
